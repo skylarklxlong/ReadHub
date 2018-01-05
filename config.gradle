@@ -1,0 +1,9 @@
+ext {
+    android = [compileSdkVersion: 26,
+               buildToolsVersion: "26.0.2",
+               applicationId    : "online.himakeit.readhub",
+               minSdkVersion    : 14,
+               targetSdkVersion : 23,
+               versionCode      : 1,
+               versionName      : "1.20180105"]
+}

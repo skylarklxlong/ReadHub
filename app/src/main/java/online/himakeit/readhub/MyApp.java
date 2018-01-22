@@ -1,6 +1,8 @@
 package online.himakeit.readhub;
 
 import android.app.Application;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Handler;
 
 /**
@@ -31,5 +33,22 @@ public class MyApp extends Application {
             mHandler = new Handler();
         }
         return mHandler;
+    }
+
+    //版本号
+    public static int getVersionCode() {
+        return getPackageInfo().versionCode;
+    }
+
+    private static PackageInfo getPackageInfo() {
+        PackageInfo info = null;
+        try {
+            PackageManager packageManager = myApp.getPackageManager();
+            info = packageManager.getPackageInfo(myApp.getPackageName(), PackageManager.GET_CONFIGURATIONS);
+            return info;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return info;
     }
 }

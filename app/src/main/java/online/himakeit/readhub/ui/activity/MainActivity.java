@@ -22,6 +22,7 @@ import online.himakeit.readhub.ui.fragment.ReadHubAboutFragment;
 import online.himakeit.readhub.ui.fragment.WebClientFragment;
 import online.himakeit.readhub.ui.fragment.WebViewFragment;
 import online.himakeit.readhub.utils.FragmentUtil;
+import online.himakeit.readhub.utils.UpdateUtil;
 
 /**
  * @author：LiXueLong
@@ -152,6 +153,7 @@ public class MainActivity extends BaseActivity {
         setNavigationViewItemClickListener();
         initDefaultFragment();
         // TODO: 2018/1/22 开启更新
+        UpdateUtil.checkUpdate(this, false);
     }
 
     private void setNavigationViewItemClickListener() {
@@ -176,6 +178,7 @@ public class MainActivity extends BaseActivity {
                         break;
                     case R.id.navigation_item_update:
                         // TODO: 2018/1/22 更新功能
+                        UpdateUtil.checkUpdate(MainActivity.this, true);
                         break;
                     default:
                 }

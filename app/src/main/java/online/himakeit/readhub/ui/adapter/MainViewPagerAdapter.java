@@ -53,9 +53,9 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
         if (title.equals(mContext.getString(R.string.page_key_topic))) {
             result = new ReadHubTopicFragment();
         } else if (title.equals(mContext.getString(R.string.page_key_news))) {
-            result = new ReadHubTechFragment();
-        } else if (title.equals(mContext.getString(R.string.page_key_developer))) {
             result = new ReadHubDevFragment();
+        } else if (title.equals(mContext.getString(R.string.page_key_developer))) {
+            result = new ReadHubTechFragment();
         }
         return result;
     }

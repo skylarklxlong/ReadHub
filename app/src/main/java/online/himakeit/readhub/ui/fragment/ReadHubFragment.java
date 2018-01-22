@@ -108,12 +108,12 @@ public abstract class ReadHubFragment extends BaseFragment {
         mCurrentAction = mAction;
         switch (mCurrentAction) {
             case ACTION_INIT:
-                clearAdapter();
+                clearData();
                 mXRecyclerView.refreshComplete();
                 mXRecyclerView.loadMoreComplete();
                 break;
             case ACTION_REFRESH:
-                clearAdapter();
+                clearData();
                 mCursor = "";
                 getData();
                 break;
@@ -126,7 +126,7 @@ public abstract class ReadHubFragment extends BaseFragment {
 
     protected abstract void getData();
 
-    protected abstract void clearAdapter();
+    protected abstract void clearData();
 
     protected abstract void setAdapter(XRecyclerView mXRecyclerView);
 }

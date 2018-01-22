@@ -15,6 +15,7 @@ import android.view.Gravity;
 import android.view.MenuItem;
 
 import online.himakeit.readhub.R;
+import online.himakeit.readhub.network.ApiClient;
 import online.himakeit.readhub.ui.fragment.AuthorAboutFragment;
 import online.himakeit.readhub.ui.fragment.MainFragment;
 import online.himakeit.readhub.ui.fragment.ReadHubAboutFragment;
@@ -55,7 +56,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void init() {
         mFragmentManager = getSupportFragmentManager();
-        // TODO: 2018/1/22 初始化api
+        ApiClient.init("https://api.readhub.me");
     }
 
     @Override

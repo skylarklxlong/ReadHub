@@ -8,8 +8,8 @@
         android:id="@+id/progressbar"
         style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/blue_4" />
+        android:layout_height="3dp"
+        android:background="@color/red" />
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_container"
@@ -20,6 +20,6 @@
             android:id="@+id/webview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/webview_background_color" />
+            android:background="@color/readhub_light" />
     </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>
